@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="An unofficial digital archive of lost PlayStation 2 game culture, forgotten horror, corrupted discs and dead websites.">
+  <title>PS2 LOST ARCHIVE // DISC 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen-noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="boot-screen" id="bootScreen" aria-label="Archive startup">
+    <div class="boot-inner">
+      <p class="boot-micro">SONY COMPUTER ENTERTAINMENT // UNOFFICIAL ARCHIVE</p>
+      <pre class="boot-logo">P S 2
+L O S T
+A R C H I V E</pre>
+      <div class="boot-progress"><span id="bootProgress"></span></div>
+      <p id="bootText">CHECKING DISC DIRECTORY...</p>
+      <button id="skipBoot" class="text-button">[ SKIP INTRO ]</button>
+    </div>
+  </div>
+
+  <main class="site-shell" id="top">
+    <div class="top-strip">
+      <span>UNOFFICIAL MEMORY UNIT</span>
+      <span>BUILD: 03.17.2003</span>
+      <span class="live-status"><i></i> CONNECTION UNSTABLE</span>
+    </div>
+
+    <section class="opening" aria-labelledby="siteTitle">
+      <div class="opening-meta">
+        <span>MEMORY CARD 01</span>
+        <span>FILE SYSTEM: DAMAGED</span>
+        <span>NO WARRANTY</span>
+      </div>
+
+      <div class="title-stage">
+        <div class="title-side title-side-left">
+          <span>DO NOT</span>
+          <span>REMOVE</span>
+          <span>THE DISC</span>
+        </div>
+
+        <div class="main-title-wrap">
+          <p class="tiny-label">PLAYSTATION 2 / UNKNOWN DIRECTORY</p>
+          <h1 id="siteTitle">LOST<br><span>GAMES</span></h1>
+          <p class="title-sub">THE ARCHIVE THAT SHOULD NOT EXIST</p>
+        </div>
+
+        <div class="title-side title-side-right">
+          <span>DATA</span>
+          <span>RECOVERY</span>
+          <span>FAILED</span>
+        </div>
+
+        <div class="crosshair crosshair-one">+</div>
+        <div class="crosshair crosshair-two">+</div>
+        <span class="vertical-stamp">COPY // 04-03 // NOT FOR SALE</span>
+      </div>
+
+      <div class="opening-bottom">
+        <p>Some games were never finished.<br>Some were never released.<br>Some should have stayed lost.</p>
+        <button class="enter-button" id="enterArchive">
+          <span class="enter-symbol">▶</span>
+          ENTER DIRECTORY
+          <span class="enter-index">[ 00 ]</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="warning-band">
+      <span>ATTENTION</span>
+      <p>THIS DIRECTORY CONTAINS DAMAGED FILES, INCOMPLETE RECORDS AND UNVERIFIED MATERIAL.</p>
+      <span class="warning-mark">!</span>
+    </div>
+
+    <section class="archive-layout" id="archive">
+      <aside class="side-console">
+        <div class="console-heading">
+          <span>SYS_MENU</span>
+          <span>v.0.03</span>
+        </div>
+
+        <p class="console-caption">SELECT AN OPERATION</p>
+        <nav class="system-menu" aria-label="Archive menu">
+          <button class="menu-option active" data-section="games">
+            <span class="menu-arrow">▶</span><span>GAME DIRECTORY</span><span>01</span>
+          </button>
+          <button class="menu-option" data-section="lost">
+            <span class="menu-arrow">▶</span><span>LOST FILES</span><span>02</span>
+          </button>
+          <button class="menu-option" data-section="fragments">
+            <span class="menu-arrow">▶</span><span>IMAGE FRAGMENTS</span><span>03</span>
+          </button>
+          <button class="menu-option" data-section="about">
+            <span class="menu-arrow">▶</span><span>ABOUT THIS DISC</span><span>04</span>
+          </button>
+          <button class="menu-option danger-option" id="corruptButton">
+            <span class="menu-arrow">▶</span><span>RUN CORRUPTION</span><span>!!</span>
+          </button>
+        </nav>
+
+        <div class="console-box">
+          <div class="console-box-title">SYSTEM REPORT</div>
+          <div class="system-row"><span>MEMORY</span><span>32 MB</span></div>
+          <div class="system-row"><span>DISC READ</span><span id="discRead">PARTIAL</span></div>
+          <div class="system-row"><span>FILES FOUND</span><span id="fileCount">008</span></div>
+          <div class="system-row"><span>SECTOR</span><span id="sector">0x03A</span></div>
+          <div class="console-rule"></div>
+          <p class="console-warning">DO NOT TRUST THE FILE NAMES.</p>
+        </div>
+
+        <div class="mini-art">
+          <div class="mini-art-circle"></div>
+          <div class="mini-art-cross">X</div>
+          <span>NO SIGNAL</span>
+          <small>IMG_0000.DAT</small>
+        </div>
+
+        <p class="side-foot">© 2003–2007 / ARCHIVE OWNER UNKNOWN</p>
+      </aside>
+
+      <div class="main-console">
+        <section class="directory-section" id="gamesSection">
+          <div class="section-topline">
+            <span>DIRECTORY / 001</span>
+            <span>READ ONLY</span>
+          </div>
+
+          <div class="directory-heading">
+            <h2>GAME<br><span>DIRECTORY</span></h2>
+            <div class="directory-stamp">UNVERIFIED<br>PRESS X</div>
+          </div>
+
+          <div class="directory-tools">
+            <label class="search-wrap">
+              <span>FIND FILE:</span>
+              <input id="searchInput" type="search" placeholder="TYPE TITLE..." autocomplete="off">
+            </label>
+            <label class="filter-wrap">
+              <span>TYPE:</span>
+              <select id="genreFilter">
+                <option value="all">ALL FILES</option>
+                <option value="horror">HORROR</option>
+                <option value="action">ACTION</option>
+                <option value="rpg">RPG</option>
+                <option value="unknown">UNKNOWN</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="directory-status">
+            <span id="resultLabel">8 RECORDS LOCATED</span>
+            <span>USE MOUSE / TOUCH TO SELECT</span>
+          </div>
+
+          <div class="game-list" id="gameList">
+            <button class="game-entry game-entry-featured" data-game="blackveil" data-genre="horror" data-title="Black Veil">
+              <span class="entry-number">001</span>
+              <span class="entry-art art-blackveil">
+                <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=650&q=80" alt="Dark abandoned landscape" loading="lazy">
+                <span class="art-code">BV_03</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">SURVIVAL HORROR / 2004</span>
+                <strong>BLACK VEIL</strong>
+                <span class="entry-description">A town without shadows. A save file without an owner.</span>
+                <span class="entry-tags"><i>PAL</i><i>DVD-ROM</i><i>UNVERIFIED</i></span>
+              </span>
+              <span class="entry-state">[ DAMAGED ]</span>
+            </button>
+
+            <button class="game-entry game-entry-offset" data-game="roomzero" data-genre="horror" data-title="Room Zero">
+              <span class="entry-number">002</span>
+              <span class="entry-art art-roomzero">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80" alt="Concrete architectural interior" loading="lazy">
+                <span class="art-code">R_00</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">PSYCHOLOGICAL / 2002</span>
+                <strong>ROOM ZERO</strong>
+                <span class="entry-description">The room appears only after the console is switched off.</span>
+                <span class="entry-tags"><i>NTSC-J</i><i>DISC 02</i></span>
+              </span>
+              <span class="entry-state">[ UNKNOWN ]</span>
+            </button>
+
+            <button class="game-entry game-entry-narrow" data-game="deadchannel" data-genre="unknown" data-title="Dead Channel">
+              <span class="entry-number">003</span>
+              <span class="entry-art art-deadchannel">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" alt="Dark empty cinema" loading="lazy">
+                <span class="art-code">CH_09</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">UNKNOWN GENRE / 2006?</span>
+                <strong>DEAD CHANNEL</strong>
+                <span class="entry-description">A television station that broadcasts after midnight.</span>
+                <span class="entry-tags"><i>REGION ?</i><i>NO MANUAL</i></span>
+              </span>
+              <span class="entry-state">[ LOST ]</span>
+            </button>
+
+            <button class="game-entry game-entry-offset" data-game="ashfall" data-genre="action" data-title="Ashfall Protocol">
+              <span class="entry-number">004</span>
+              <span class="entry-art art-ashfall">
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80" alt="Dark forest" loading="lazy">
+                <span class="art-code">AP_17</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">TACTICAL ACTION / 2005</span>
+                <strong>ASHFALL PROTOCOL</strong>
+                <span class="entry-description">Mission data exists. The mission does not.</span>
+                <span class="entry-tags"><i>DVD-ROM</i><i>BUILD 0.7</i></span>
+              </span>
+              <span class="entry-state">[ INCOMPLETE ]</span>
+            </button>
+
+            <button class="game-entry game-entry-featured" data-game="morrow" data-genre="rpg" data-title="Morrow Static">
+              <span class="entry-number">005</span>
+              <span class="entry-art art-morrow">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Foggy monochrome landscape" loading="lazy">
+                <span class="art-code">MS_11</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">RPG / 2003</span>
+                <strong>MORROW STATIC</strong>
+                <span class="entry-description">NPC dialogue changes when the memory card is removed.</span>
+                <span class="entry-tags"><i>NTSC-U</i><i>2 PLAYERS?</i></span>
+              </span>
+              <span class="entry-state">[ CORRUPTED ]</span>
+            </button>
+
+            <button class="game-entry game-entry-narrow" data-game="whiteout" data-genre="horror" data-title="Whiteout">
+              <span class="entry-number">006</span>
+              <span class="entry-art art-whiteout">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="Empty misty horizon" loading="lazy">
+                <span class="art-code">W_13</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">HORROR / 2001?</span>
+                <strong>WHITEOUT</strong>
+                <span class="entry-description">Every room is bright. Every room is empty.</span>
+                <span class="entry-tags"><i>DISC 01</i><i>NO AUDIO</i></span>
+              </span>
+              <span class="entry-state">[ PARTIAL ]</span>
+            </button>
+
+            <button class="game-entry game-entry-offset" data-game="nullcity" data-genre="unknown" data-title="Null City">
+              <span class="entry-number">007</span>
+              <span class="entry-art art-nullcity">
+                <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80" alt="Night landscape" loading="lazy">
+                <span class="art-code">NC_00</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">SIMULATION / 2007?</span>
+                <strong>NULL CITY</strong>
+                <span class="entry-description">A map of a city that does not exist in any atlas.</span>
+                <span class="entry-tags"><i>REGION FREE?</i><i>MAP LOST</i></span>
+              </span>
+              <span class="entry-state">[ UNREADABLE ]</span>
+            </button>
+
+            <button class="game-entry game-entry-narrow" data-game="lastsave" data-genre="action" data-title="Last Save">
+              <span class="entry-number">008</span>
+              <span class="entry-art art-lastsave">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Desolate foggy landscape" loading="lazy">
+                <span class="art-code">SV_99</span>
+              </span>
+              <span class="entry-info">
+                <span class="entry-type">ACTION / YEAR UNKNOWN</span>
+                <strong>LAST SAVE</strong>
+                <span class="entry-description">One save slot. A date that has not happened yet.</span>
+                <span class="entry-tags"><i>MEMORY CARD</i><i>DO NOT LOAD</i></span>
+              </span>
+              <span class="entry-state">[ SEALED ]</span>
+            </button>
+          </div>
+
+          <div class="empty-state hidden" id="emptyState">
+            <span>ERROR 404: FILE NOT FOUND</span>
+            <p>THE DIRECTORY DOES NOT RECOGNIZE YOUR REQUEST.</p>
+            <button id="clearSearch" class="text-button">[ RESET SEARCH ]</button>
+          </div>
+
+          <div class="list-footer">
+            <span>END OF VISIBLE DIRECTORY</span>
+            <span>MORE DATA MAY EXIST</span>
+          </div>
+        </section>
+
+        <section class="lost-section hidden" id="lostSection">
+          <div class="section-topline"><span>DIRECTORY / 002</span><span>FRAGMENT RECOVERY</span></div>
+          <h2 class="section-display">LOST<br>FILES<span>_</span></h2>
+          <p class="section-intro">Three files were recovered from an unlabelled memory card. Their original names have been overwritten.</p>
+
+          <div class="lost-files">
+            <button class="lost-file file-a" data-file="07">
+              <span class="file-id">FILE_07.DAT</span>
+              <span class="file-icon">▧</span>
+              <strong>VOICE_03</strong>
+              <span>SIZE: 004 KB / STATUS: PARTIAL</span>
+              <span class="file-open">OPEN FILE ↗</span>
+            </button>
+            <button class="lost-file file-b" data-file="12">
+              <span class="file-id">FILE_12.BIN</span>
+              <span class="file-icon">▨</span>
+              <strong>MAP_VOID</strong>
+              <span>SIZE: UNKNOWN / STATUS: DAMAGED</span>
+              <span class="file-open">OPEN FILE ↗</span>
+            </button>
+            <button class="lost-file file-c" data-file="19">
+              <span class="file-id">FILE_19.TXT</span>
+              <span class="file-icon">▤</span>
+              <strong>READ_ME_FINAL</strong>
+              <span>SIZE: 001 KB / STATUS: UNSTABLE</span>
+              <span class="file-open">OPEN FILE ↗</span>
+            </button>
+          </div>
+
+          <div class="typewriter-note">
+            <span>RECOVERED NOTE // 00:00:00</span>
+            <p>“If you can read this, the game has already loaded.”</p>
+            <small>AUTHOR: UNKNOWN</small>
+          </div>
+        </section>
+
+        <section class="fragments-section hidden" id="fragmentsSection">
+          <div class="section-topline"><span>DIRECTORY / 003</span><span>IMAGE CACHE</span></div>
+          <h2 class="section-display">IMAGE<br>FRAGMENTS<span>_</span></h2>
+          <p class="section-intro">Cached thumbnails recovered from an abandoned fan page. Click a fragment to inspect its record.</p>
+
+          <div class="fragment-wall">
+            <button class="fragment fragment-one" data-fragment="A-01">
+              <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80" alt="Night landscape">
+              <span>IMG_A01 / 320×240</span>
+            </button>
+            <button class="fragment fragment-two" data-fragment="B-04">
+              <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80" alt="Concrete architecture">
+              <span>IMG_B04 / 256×192</span>
+            </button>
+            <button class="fragment fragment-three" data-fragment="C-09">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" alt="Empty cinema">
+              <span>IMG_C09 / 640×480</span>
+            </button>
+            <button class="fragment fragment-four" data-fragment="D-13">
+              <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80" alt="Dark forest">
+              <span>IMG_D13 / 160×120</span>
+            </button>
+            <button class="fragment fragment-five" data-fragment="E-21">
+              <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="Foggy horizon">
+              <span>IMG_E21 / 320×240</span>
+            </button>
+          </div>
+          <p class="fragment-footnote">NOTE: IMAGES ARE ATMOSPHERIC PLACEHOLDERS, NOT VERIFIED SCREENSHOTS OF RELEASED GAMES.</p>
+        </section>
+
+        <section class="about-section hidden" id="aboutSection">
+          <div class="section-topline"><span>DIRECTORY / 004</span><span>DOCUMENTATION</span></div>
+          <h2 class="section-display">ABOUT<br>THIS DISC<span>_</span></h2>
+          <div class="about-copy">
+            <p class="about-big">THIS IS NOT AN OFFICIAL PLAYSTATION ARCHIVE.</p>
+            <p>LOST GAMES is an experimental web tribute to the strange corners of early-2000s gaming culture: abandoned fan pages, obscure menus, scratched discs, corrupted save data and the atmosphere of games remembered imperfectly.</p>
+            <p>The titles and file records presented in this interface are fictional concepts created for the visual experience. The imagery is atmospheric placeholder photography, not proof of lost or unreleased PS2 games.</p>
+            <div class="about-stamp">UNOFFICIAL<br>NO AFFILIATION<br>2003—2007</div>
+          </div>
+          <div class="spec-sheet">
+            <div><span>PLATFORM</span><strong>WEB / MEMORY</strong></div>
+            <div><span>INTERFACE</span><strong>MONOCHROME CRT</strong></div>
+            <div><span>STATUS</span><strong>STILL RUNNING</strong></div>
+            <div><span>LAST BACKUP</span><strong>UNKNOWN</strong></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="bottom-fragment">
+      <div class="fragment-label">UNRECOVERED SECTOR / 09</div>
+      <p class="giant-text">DO YOU<br>REMEMBER<br><span>THIS?</span></p>
+      <div class="fragment-aside">
+        <div class="static-box">NO<br>SIGNAL</div>
+        <p>THE SCREEN WAS NEVER SUPPOSED TO STAY ON THIS LONG.</p>
+        <button id="staticButton" class="text-button">[ RESTORE SIGNAL ]</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <span>PS2 LOST ARCHIVE</span>
+        <span>END OF DISC</span>
+        <a href="#top">BACK TO START ↑</a>
+      </div>
+      <div class="footer-bottom">
+        <span>BEST VIEWED ON A CRT THAT NO LONGER EXISTS.</span>
+        <span>VISITOR NO. <b id="visitorNumber">000042</b></span>
+        <span id="clock">00:00:00</span>
+      </div>
+      <p class="footer-last">IF YOU FOUND THIS PAGE, DO NOT SHARE THE URL.</p>
+    </footer>
+  </main>
+
+  <dialog id="gameDialog" class="archive-dialog">
+    <div class="dialog-top">
+      <span>FILE INSPECTOR / READ ONLY</span>
+      <button class="dialog-close" data-close-dialog aria-label="Close dialog">[ X ]</button>
+    </div>
+    <div class="dialog-content">
+      <div class="dialog-visual" id="dialogVisual">
+        <span>PREVIEW NOT AVAILABLE</span>
+      </div>
+      <div class="dialog-details">
+        <p class="dialog-code" id="dialogCode">FILE_001</p>
+        <h2 id="dialogTitle">UNKNOWN TITLE</h2>
+        <p class="dialog-status" id="dialogStatus">[ DAMAGED ]</p>
+        <div class="dialog-rule"></div>
+        <p id="dialogDescription"></p>
+        <div class="dialog-facts" id="dialogFacts"></div>
+        <button class="dialog-action" id="markFileButton">[ MARK FOR RECOVERY ]</button>
+      </div>
+    </div>
+    <div class="dialog-bottom"><span>DO NOT WRITE TO DISC</span><span>ESC TO CLOSE</span></div>
+  </dialog>
+
+  <dialog id="fileDialog" class="archive-dialog file-dialog">
+    <div class="dialog-top">
+      <span>RECOVERED FILE / TEXT VIEWER</span>
+      <button class="dialog-close" data-close-dialog aria-label="Close dialog">[ X ]</button>
+    </div>
+    <div class="file-viewer">
+      <p id="fileViewerId">FILE_00.DAT</p>
+      <pre id="fileViewerContent"></pre>
+      <button class="dialog-action" data-close-dialog>[ CLOSE FILE ]</button>
+    </div>
+    <div class="dialog-bottom"><span>TEXT MAY BE INCOMPLETE</span><span>EOF</span></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="corruption-overlay" id="corruptionOverlay" aria-hidden="true">
+    <pre>FATAL ERROR
+MEMORY ADDRESS NOT FOUND
+DO NOT CONTINUE
+DO NOT CONTINUE
+DO NOT CONTINUE</pre>
+    <button id="restoreButton">[ RESTORE SYSTEM ]</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
