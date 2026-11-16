@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b8ff00" />
+  <title>LEON.exe — Resident Evil Archive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+  <div class="cursor-cross" id="cursorCross">+</div>
+
+  <header class="topbar">
+    <a class="logo" href="#home">BIO<span>HAZARD</span>.EXE</a>
+    <span class="system-status"><i></i> SYSTEM UNSTABLE</span>
+    <button class="sound-toggle" id="glitchBtn">[ GLITCH MODE ]</button>
+  </header>
+
+  <main id="home">
+    <div class="vertical-label">RACCOON CITY / 1998—2004 / CLASSIFIED</div>
+
+    <section class="hero">
+      <div class="hero-stamp">PROPERTY OF<br>U.S. GOVERNMENT</div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SURVIVAL HORROR // CHARACTER ARCHIVE #004</p>
+        <h1 class="hero-title">
+          <span class="title-small">THE</span>
+          <span class="title-main" data-text="SURVIVOR">SURVIVOR</span>
+          <span class="title-name">LEON S.<br><em>KENNEDY</em></span>
+        </h1>
+        <p class="hero-description">
+          Six years after Raccoon City.<br>
+          One agent. Zero clean exits.<br>
+          <span>THIS FILE SHOULD NOT EXIST.</span>
+        </p>
+        <a href="#dossier" class="jump-link">↓ OPEN CORRUPTED FILE</a>
+      </div>
+
+      <div class="hero-character">
+        <div class="character-tag">IMG_004_FINAL_FINAL.png</div>
+        <img
+          class="leon-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Resident%20Evil%204%20Remake%20-%20Leon%20S.%20Kennedy.jpg?width=1100"
+          alt="Leon S. Kennedy from Resident Evil 4 Remake"
+        />
+        <div class="red-cross">✳</div>
+        <div class="character-number">004</div>
+      </div>
+
+      <div class="sticker sticker-01">NO<br>HEROES<br>HERE</div>
+      <div class="sticker sticker-02">SAVE<br>YOURSELF!</div>
+      <div class="handwritten">he never<br>really left.</div>
+
+      <div class="hero-bottom">
+        <span>WARNING: MEMORY LEAK DETECTED</span>
+        <span>© UMBRELLA CORP. // INTERNAL USE ONLY</span>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="System message">
+      <div class="marquee-track">
+        <span>YOU ARE NOT SAFE HERE ✳ YOU ARE NOT SAFE HERE ✳ YOU ARE NOT SAFE HERE ✳</span>
+        <span>YOU ARE NOT SAFE HERE ✳ YOU ARE NOT SAFE HERE ✳ YOU ARE NOT SAFE HERE ✳</span>
+      </div>
+    </section>
+
+    <section class="dossier section-pad" id="dossier">
+      <div class="section-index">[ 01 / PERSONNEL DATA ]</div>
+      <h2 class="section-heading">WHO THE<br><span>HELL IS HE?</span></h2>
+
+      <div class="dossier-layout">
+        <div class="fake-document">
+          <div class="doc-top">
+            <span>UNITED STATES</span>
+            <span>FORM 09-RE</span>
+          </div>
+          <div class="doc-photo">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Resident%20Evil%204%20Remake%20-%20Leon%20S.%20Kennedy.jpg?width=500"
+              alt="Leon Kennedy personnel photograph"
+            />
+            <span class="photo-mark">SUBJECT 004</span>
+          </div>
+          <div class="doc-lines">
+            <p>NAME <b>LEON S. KENNEDY</b></p>
+            <p>OCCUPATION <b>FEDERAL AGENT</b></p>
+            <p>STATUS <b class="danger-text">ACTIVE / UNKNOWN</b></p>
+            <p>PSYCH PROFILE <b>DO NOT ASK</b></p>
+          </div>
+          <div class="doc-stamp">CONFIDENTIAL</div>
+          <div class="barcode">|||| ||| |||| || |||| ||| ||||</div>
+        </div>
+
+        <div class="dossier-text">
+          <p class="huge-quote">“WHERE<br>IS EVERY<br><span>ONE?”</span></p>
+          <p class="body-copy">
+            Rookie cop. City-wide disaster. Government dog.
+            Leon Kennedy has a talent for surviving situations
+            that should have deleted him from existence.
+          </p>
+          <div class="status-box">
+            <span>MENTAL STABILITY</span>
+            <div class="meter"><i style="width: 38%"></i></div>
+            <span class="meter-value">38% // CRITICAL</span>
+          </div>
+          <div class="status-box">
+            <span>COMBAT EXPERIENCE</span>
+            <div class="meter"><i style="width: 94%"></i></div>
+            <span class="meter-value">94% // HIGH</span>
+          </div>
+          <p class="scribble">he's tired. can you blame him?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="liminal-section">
+      <div class="liminal-overlay"></div>
+      <div class="liminal-label">LOCATION DATA CORRUPTED // 03:17 AM</div>
+      <div class="liminal-copy">
+        <p>YOU HAVE BEEN HERE BEFORE.</p>
+        <h2>THE HALLWAY<br>IS <span>NEVER</span><br>THE SAME.</h2>
+        <p class="small-note">NO MAP. NO SIGNAL. NO EXIT.</p>
+      </div>
+      <div class="liminal-coordinate">41° 24' 12.2" N<br>UNKNOWN LOCATION</div>
+    </section>
+
+    <section class="ada-section section-pad" id="ada">
+      <div class="section-index">[ 02 / UNKNOWN CONTACT ]</div>
+      <p class="ada-overline">SHE WAS NEVER ON YOUR SIDE.</p>
+
+      <div class="ada-collage">
+        <div class="ada-image-wrap">
+          <!-- Replace images/ada.jpg with your own Ada Wong screenshot/render -->
+          <img
+            src="images/ada.jpg"
+            alt="Ada Wong — replace with your local image"
+            onerror="this.style.display='none';this.parentElement.classList.add('image-missing')"
+          />
+          <span class="missing-note">INSERT<br>ADA_WONG.JPG</span>
+          <span class="image-cross">×</span>
+        </div>
+
+        <div class="ada-title">
+          <span class="tiny-red">DO NOT TRUST</span>
+          <h2>ADA<br><i>WONG</i></h2>
+          <p>AN ANSWER WITH NO QUESTION.</p>
+        </div>
+
+        <div class="ada-note note-a">SHE KNOWS<br>MORE THAN YOU.</div>
+        <div class="ada-note note-b">UNKNOWN<br>ALLEGIANCE</div>
+        <div class="ada-file">
+          <span>FILE STATUS</span>
+          <b>REDACTED</b>
+          <span>LAST SEEN: ???</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence-section section-pad" id="evidence">
+      <div class="section-index">[ 03 / EVIDENCE WALL ]</div>
+      <h2 class="section-heading evidence-heading">PIECES OF<br><span>THE NIGHT.</span></h2>
+      <p class="evidence-intro">Recovered files. Damaged memories. Unverified images.</p>
+
+      <div class="evidence-wall">
+        <figure class="evidence ev-a">
+          <img src="images/village.jpg" alt="Abandoned village scene"
+            onerror="this.src='https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80'">
+          <figcaption>IMG_0007 // THE VILLAGE</figcaption>
+        </figure>
+
+        <figure class="evidence ev-b">
+          <img src="images/monster.jpg" alt="Monster evidence"
+            onerror="this.src='https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=700&q=80'">
+          <figcaption>SPECIMEN // UNKNOWN</figcaption>
+        </figure>
+
+        <figure class="evidence ev-c">
+          <img src="images/corridor.jpg" alt="Dark corridor"
+            onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80'">
+          <figcaption>NO EXIT FOUND</figcaption>
+        </figure>
+
+        <div class="evidence-text ev-d">DON'T<br>LOOK<br>BACK<span>!</span></div>
+        <div class="evidence-text ev-e">THE<br>TRUTH IS<br><span>ROTTING.</span></div>
+
+        <div class="evidence-sticker">EVIDENCE<br>NO. 13<br>✳</div>
+        <div class="evidence-tape"></div>
+      </div>
+    </section>
+
+    <section class="timeline section-pad" id="timeline">
+      <div class="section-index">[ 04 / FRAGMENTED TIMELINE ]</div>
+      <h2 class="section-heading">THE YEARS<br><span>DON'T HEAL.</span></h2>
+
+      <div class="timeline-list">
+        <article class="timeline-entry">
+          <span class="timeline-year">1998</span>
+          <div class="timeline-mark">✳</div>
+          <div class="timeline-info">
+            <h3>RACCOON CITY</h3>
+            <p>THE NIGHT THE WORLD BROKE.</p>
+          </div>
+          <span class="timeline-code">EVENT_01</span>
+        </article>
+        <article class="timeline-entry">
+          <span class="timeline-year">2004</span>
+          <div class="timeline-mark">✳</div>
+          <div class="timeline-info">
+            <h3>MISSION: EUROPE</h3>
+            <p>THE PRESIDENT'S DAUGHTER. A VILLAGE THAT BREATHES WRONG.</p>
+          </div>
+          <span class="timeline-code">EVENT_02</span>
+        </article>
+        <article class="timeline-entry">
+          <span class="timeline-year">???</span>
+          <div class="timeline-mark">✳</div>
+          <div class="timeline-info">
+            <h3>FILE CORRUPTED</h3>
+            <p>THE STORY IS STILL RUNNING.</p>
+          </div>
+          <span class="timeline-code">EVENT_XX</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-screen">
+      <div class="final-noise"></div>
+      <p>END OF TRANSMISSION?</p>
+      <h2>YOU CAN'T<br><span>SAVE</span> EVERYONE.</h2>
+      <a href="#home" class="restart-btn">↻ RESTART MEMORY</a>
+      <span class="final-code">LEON.EXE HAS STOPPED RESPONDING</span>
+    </section>
+  </main>
+
+  <footer>
+    <span>RESIDENT EVIL FAN-MADE ARCHIVE</span>
+    <span>NOT AFFILIATED WITH CAPCOM</span>
+    <span>MADE IN A BAD DREAM © 2004—2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
